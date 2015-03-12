@@ -3,7 +3,7 @@ A some basic rules for validating form input.
 
 Example:
 
-$validate = new SimpleValidation(
+    $validate = new SimpleValidation(
       $input, 
       array(
         'title'       => 'required|in:Mr,Mrs',
@@ -18,7 +18,7 @@ $validate = new SimpleValidation(
         'isAwesome'   => 'required|boolean'
       )
     );
-
+    
     if($validate->failed())
     {
       print_r($validate->errors);
