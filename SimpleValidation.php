@@ -18,7 +18,7 @@ class SimpleValidation
 
       foreach($this->rules[$key] as $rule)
       {
-        if(isset($this->input[$key]))
+        if(isset($this->input[$key]) && $this->input[$key] !== '')
         {
           $method = 'test_' . $rule;
           $result = $this->callMethod($method, $this->input[$key]);          
